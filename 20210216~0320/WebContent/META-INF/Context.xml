@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+
+	<Resource
+	
+		name ="jdbc/oracle"
+		auth ="Container"
+		type ="javax.sql.DataSource"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+		url="jdbc:oracle:thin:@localhost:1521:xe"
+		username="c##kjs"
+		password="123456"
+		maxActive="20"
+		maxIdle="10"
+		maxWait="-1"
+		/>
+<!-- 
+	여러개의 Connection을 두개의 리스트에 나누어 담고
+	작업중인 객체는 Active, 대기중인 객체는 Idle에 담는다
+	사용이 끝나면 연결을 소멸시키는게 아니라, 객체를 초기화 후 Idle에 담아두고
+	필요하면 꺼내서 한다. (= 객체를 돌려쓴다)
+	
+	여러 Connection을 가지고 있는 객체를 DataSource라 하며
+	DataSource를 xml 파일로 정의하여 객체를 바로 불러올 수 있도록 하는 파일
+
+
+ -->		
+		
+</Context>
